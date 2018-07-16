@@ -23,8 +23,29 @@ class UVIndex
     puts @city
   end
 
+  def get_lat
+    @city.first["lat"]
+  end
+
+  def get_lon
+    @city.first["lon"]
+  end
+
+  def get_date
+    @city.first["date"]
+  end
+
+  def get_value
+    @city.first["value"]
+  end
+
+  def get_second_date
+    @city[1]["date"]
+  end
+
+
 end
 
 checking = UVIndex.new
 p checking.get_response
-p checking.print_result
+puts checking.print_result

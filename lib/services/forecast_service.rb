@@ -22,8 +22,40 @@ class Forecast
     puts @city
   end
 
+  def get_humidity
+    @city["list"].first["main"]["humidity"]
+  end
+
+  def get_sea_level
+    @city["list"].first["main"]["sea_level"]
+  end
+
+  def get_main
+    @city["list"].first["main"]
+  end
+
+  def get_description
+    @city["list"].first["weather"].first["description"]
+  end
+
+  def get_city_name
+    @city["city"]["name"]
+  end
+
+  def get_country
+    @city["city"]["country"]
+  end
+
+  def get_code
+    @city["cod"]
+  end
+
+  def get_weather
+    @city["list"].first["weather"].first["main"]
+  end
+
 end
 
-# checking = Forecast.new
-# p checking.get_response
+checking = Forecast.new
+p checking.get_response
 # p checking.print_result
