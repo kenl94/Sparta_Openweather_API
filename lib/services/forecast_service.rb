@@ -54,6 +54,29 @@ class Forecast
     @city["list"].first["weather"].first["main"]
   end
 
+  def get_wind_speed
+    @city["list"].first["wind"]["speed"]
+  end
+
+  def get_temp
+    @city["list"].first["main"]["temp"]
+  end
+
+  def get_min_temp
+    @city["list"].first["main"]["temp_min"]
+  end
+
+  def get_max_temp
+    @city["list"].first["main"]["temp_max"]
+  end
+
+  def get_list
+    @city["list"]
+  end
+
+  def get_coord
+    @city["city"]["coord"]
+  end
 end
 
 checking = Forecast.new

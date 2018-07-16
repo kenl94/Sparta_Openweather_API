@@ -41,49 +41,30 @@ describe 'OpenWeather API test' do
     it "should return main as clear, clouds or rain" do
       expect(@city.get_weather).to eql("Rain").or eql("Clear").or eql("Clouds")
     end
-    it "should" do
 
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
-    end
-    it "should" do
-
+    it "should return windspeed as a integer" do
+      expect(@city.get_wind_speed).to be_a Integer
     end
 
+    it "should return temperature as a Float" do
+      expect(@city.get_temp).to be_a Float
+    end
+
+    it "should return min-temp as a float" do
+      expect(@city.get_min_temp).to be_a Float
+    end
+
+    it "should return max-temp as a float" do
+      expect(@city.get_max_temp).to be_a Float
+    end
+
+    it "should return list as an array" do
+      expect(@city.get_list).to be_a Array
+    end
+
+    it "return coordinates for lat and lon to be a Hash" do
+      expect(@city.get_coord).to be_a Hash
+    end
   end
 
 end
